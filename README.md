@@ -15,9 +15,16 @@ function greeter(p: string) {
 	return "Hello, " + p;
 }
 let user = "User";
-document.body.innterHTML = greeter(user);
+document.body.innerHTML = greeter(user);
 ```
 
 run `tsc greeter.ts` to compile it into `greeter.js`
 
 ## Syntax
+
+
+
+
+
+
+
