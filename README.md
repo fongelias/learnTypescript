@@ -28,7 +28,10 @@ loaders to use:
 `npm install --save-dev typescript awesome-typescript-loader source-map-loader`
 `source-map-loader` is added to update the sourcemap as if you were debugging the original typescript code
 
-add a `tsconfig.json` file so that your IDE, the `tsc` command, and the loade all share the same options
+add a `tsconfig.json` file so that your IDE, the `tsc` command, and the loader all share the same options
+
+react files with typescript are named with the extension `.tsx`
+
 
 ## Syntax
 ### Type annotations
