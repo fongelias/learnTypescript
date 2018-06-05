@@ -1,0 +1,19 @@
+{
+  "name": "learntypescript",
+  "version": "1.0.0",
+  "description": "## Why typescript? * compiles to vanilla js * static checking * code refactoring * optional types and type inference",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fongelias/learnTypescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fongelias/learnTypescript/issues"
+  },
+  "homepage": "https://github.com/fongelias/learnTypescript#readme"
+}
