@@ -50,7 +50,31 @@ can be resolved by making sure the file above `index.tsx` imports react with thi
 ### Type annotations
 Record the intended contract of a function/variable, validated at compile time.
 
-`function greeter(person: string)`
+`function greeter(person: string): string`
+
+"function greeter takes a string named person and returns a string"
+
+
+### Types
+```
+boolean
+number
+string
+Array<number> /*or*/ number[]
+[string, number] //for a tuple
+enum TypeName {Types}
+any //for variables you dont know
+void
+never //return value for function that never returns or always throws an error
+object
+```
+
+### Type assertion
+angle bracket syntax (not allowed with jsx):
+`let strLength: number = (<string> someValue).length;`
+
+`as` keyword syntax:
+`let strLength: number = (someValue as string).length;
 
 ### Interfaces
 We can create interfaces with the `interface` keyword:
@@ -64,7 +88,57 @@ interface Person {
 
 note that the braces are a block, not an object literal.
 
-Types are compatible if their internal structure is compatible, so we don't need to use an `implements` clause
+Types are compatible if their internal structure is compatible, so we don't need to use an `implements` clause (except for implementation of classes)
+
+Properties can be optional or `readonly`, and interfaces can carry additional properties than ones listed:
+```
+interface BodyPart {
+	readonly name: string;
+	injuries?: Array<string>;
+	[propName: string]: any;
+}
+```
+
+Interfaces can also be created for function types:
+```
+interface FuncType {
+	(variableOne: string, variableTwo: string): boolean;
+}
+
+let myFunc: FuncType;
+//parameter names in function type does not need to match
+myFunc = function(variableOne: string, second: string) {
+	//some functionality
+}
+```
+
+Interfaces can be use with indexable types, denoting how its indexed and what the results are. This can also enforce types in a dictionary:
+```
+interface StringArray {
+	[index: number]: string;
+}
+
+let myArray: StringArray;
+myArray = ["string", "string2"];
+```
+
+You can write interfaces to enforce class descriptions:
+```
+interface ClockInterface {
+	currentTime: Date;
+	setTime(d: Date);
+}
+
+class Clock implements ClockInterface {
+	currentTime: Date;
+	setTime(d: Date) {
+		this.currentTime = d;
+	}
+	constructor(h: number, m: number) {}
+}
+```
+only the instance side of the class is checked, [not the static side](https://www.typescriptlang.org/docs/handbook/interfaces.html#difference-between-the-static-and-instance-sides-of-classes)
+
 
 ### Classes
 sample class:
