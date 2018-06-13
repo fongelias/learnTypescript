@@ -15,7 +15,7 @@ interface IImplementor {
 
 class ConcreteAbstraction implements IAbstraction {
 	//Should be implemented to delegate to an Implementor class
-	implementor: IImplementor
+	implementor: IImplementor;
 
 	constructor(impl: IImplementor) {
 		this.implementor = impl;
