@@ -140,6 +140,7 @@ class Clock implements ClockInterface {
 only the instance side of the class is checked, [not the static side](https://www.typescriptlang.org/docs/handbook/interfaces.html#difference-between-the-static-and-instance-sides-of-classes)
 
 
+
 ### Classes
 sample class:
 ```
@@ -151,7 +152,7 @@ class Student {
 }
 ```
 
-`public` creates properties on the object with that name
+`public` creates properties on the object with that name when used in the constructor's inputs
 
 
 
