@@ -78,6 +78,16 @@ angle bracket syntax (not allowed with jsx):
 `let strLength: number = (someValue as string).length;
 
 
+### [Advanced types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+#### Intersection types
+Allows combination of multiple types using the `&` symbol:
+`T & U`
+#### Union types
+Allows the acceptance of multiple types using the `|` symbol:
+`T | U`
+
+
+
 ### Functions
 function parameters and the return value can be typed:
 ```
