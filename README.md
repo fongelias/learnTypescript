@@ -69,12 +69,24 @@ never //return value for function that never returns or always throws an error
 object
 ```
 
+
 ### Type assertion
 angle bracket syntax (not allowed with jsx):
 `let strLength: number = (<string> someValue).length;`
 
 `as` keyword syntax:
 `let strLength: number = (someValue as string).length;
+
+
+### Functions
+function parameters and the return value can be typed:
+```
+let somefunc = function(stringParam: string, numParam?: number): string { return stringParam + number; }
+```
+
+parameters can be optional or defaulted:
+`function(numParam = 1, stringParam?: string)`
+
 
 ### Interfaces
 We can create interfaces with the `interface` keyword:
@@ -153,6 +165,8 @@ class Student {
 ```
 
 `public` creates properties on the object with that name when used in the constructor's inputs
+
+
 
 
 
